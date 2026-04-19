@@ -1,0 +1,8 @@
+task.md
+plan.md
+test.ipynb
+venv/
+dataset/
+outputs/
+__pycache__/
+pickle_extr.py
