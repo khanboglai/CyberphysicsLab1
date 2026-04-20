@@ -37,35 +37,44 @@
 ## Инструкция по запуску
 
 1. Склонировать репозиторий
+
 ```bash
 git clone https://github.com/khanboglai/CyberphysicsLab1.git
 ```
 
 2. Перейти в папку проекта
+
 ```bash
 cd CyberphysicsLab1
 ```
 
 3. Создать виртуальное окружение `venv`
+
 ```bash
 python3 -m venv venv
 ```
 
 4. Активировать его
+
+
 На MacOS или Linux
+
 ```bash
 source venv/bin/activate
 ```
 
 На Windows через `cmd`
+
 ```bash
 venv\Scripts\activate.bat
 ```
 
 5. Установить зависиомсти из файла [requirements.txt](requirements.txt)
+
 ```bash
 pip install -r requirements.txt
 ```
+
 *В файле нужно поменять версию библиотеки torch и torchvision под свои мощности GPU!*
 
 6. Датасет сохранить в папку `dataset` рядом с ноутбуками.
@@ -73,21 +82,24 @@ pip install -r requirements.txt
 7. Запуск ноутбуков. При запуске настройте ядро на созданное выше вирутальное окружение.
 
 *Запускать ноутбуки необходимо в следующем порядке:*
-| №  | Ноутбук                                                         |
-| -- | --------------------------------------------------------------- |
-| 1  | [data_analize.ipynb](data_analize.ipynb)                        |
-| 2  | [baseline.ipynb](baseline.ipynb)                                | 
-| 3  | [hypothesis_1.ipynb](hypothesis_1.ipynb)                        |
-| 4  | [hypothesis_2.ipynb](hypothesis_2.ipynb)                        |
-| 5  | [hypothesis_3.ipynb](hypothesis_3.ipynb)                        |
-| 6  | [hypothesis_4.ipynb](hypothesis_4.ipynb)                        |
-| 7  | [hypothesis_5.ipynb](hypothesis_5.ipynb)                        |
-| 8  | [hypothesis_6.ipynb](hypothesis_6.ipynb)                        |
-| 9  | [hypothesis_6_swin.ipynb](hypothesis_6_swin.ipynb)              |
-| 10 | [custom_cnn_baseline.ipynb](custom_cnn_baseline.ipynb)          |
-| 11 | [custom_cnn_improved.ipynb](custom_cnn_improved.ipynb)          |
-| 12 | [custom_vit_baseline.ipynb](custom_vit_baseline.ipynb)          |
-| 13 | [custom_vit_improved.ipynb](custom_vit_improved.ipynb)          |
+
+
+| №   | Ноутбук                                                |
+| --- | ------------------------------------------------------ |
+| 1   | [data_analize.ipynb](data_analize.ipynb)               |
+| 2   | [baseline.ipynb](baseline.ipynb)                       |
+| 3   | [hypothesis_1.ipynb](hypothesis_1.ipynb)               |
+| 4   | [hypothesis_2.ipynb](hypothesis_2.ipynb)               |
+| 5   | [hypothesis_3.ipynb](hypothesis_3.ipynb)               |
+| 6   | [hypothesis_4.ipynb](hypothesis_4.ipynb)               |
+| 7   | [hypothesis_5.ipynb](hypothesis_5.ipynb)               |
+| 8   | [hypothesis_6.ipynb](hypothesis_6.ipynb)               |
+| 9   | [hypothesis_6_swin.ipynb](hypothesis_6_swin.ipynb)     |
+| 10  | [custom_cnn_baseline.ipynb](custom_cnn_baseline.ipynb) |
+| 11  | [custom_cnn_improved.ipynb](custom_cnn_improved.ipynb) |
+| 12  | [custom_vit_baseline.ipynb](custom_vit_baseline.ipynb) |
+| 13  | [custom_vit_improved.ipynb](custom_vit_improved.ipynb) |
+
 
 8. В папку outputs сохраняться веса обученных моделей, а также результаты обучения (метрики, матрица ошибок) в файле `experiment_results.pkl`.
 
@@ -182,7 +194,7 @@ pip install -r requirements.txt
 
 | Семейство   | Тип                  | Модель                    | Test Accuracy | Test Balanced Accuracy | Test Macro-F1 |
 | ----------- | -------------------- | ------------------------- | ------------- | ---------------------- | ------------- |
-| CNN         | Baseline (готовая)   | ResNet18 | 0.8544        | 0.8545                 | 0.8588        |
+| CNN         | Baseline (готовая)   | ResNet18                  | 0.8544        | 0.8545                 | 0.8588        |
 | CNN         | Baseline (кастомная) | CustomMiniResNet baseline | 0.8762        | 0.8761                 | 0.8792        |
 | CNN         | Improved (готовая)   | ResNet18_Aug+Smooth+30ep  | 0.8938        | 0.8938                 | 0.8958        |
 | CNN         | Improved (кастомная) | CustomMiniResNet improved | 0.8822        | 0.8821                 | 0.8851        |
