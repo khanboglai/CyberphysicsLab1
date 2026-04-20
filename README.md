@@ -34,27 +34,43 @@
 
 ---
 
-## Инструкция по запуску на Linux/MacOS
+## Инструкция по запуску
 
-1. Создать виртуальное окружение `venv`
+1. Склонировать репозиторий
+```bash
+git clone https://github.com/khanboglai/CyberphysicsLab1.git
+```
+
+2. Перейти в папку проекта
+```bash
+cd CyberphysicsLab1
+```
+
+3. Создать виртуальное окружение `venv`
 ```bash
 python3 -m venv venv
 ```
 
-2. Активировать его
+4. Активировать его
+На MacOS или Linux
 ```bash
 source venv/bin/activate
 ```
 
-3. Установить зависиомсти из файла [requirements.txt](requirements.txt)
+На Windows через `cmd`
+```bash
+venv\Scripts\activate.bat
+```
+
+5. Установить зависиомсти из файла [requirements.txt](requirements.txt)
 ```bash
 pip install -r requirements.txt
 ```
 *В файле нужно поменять версию библиотеки torch и torchvision под свои мощности GPU!*
 
-4. Датасет сохранить в папку `dataset` рядом с ноутбуками.
+6. Датасет сохранить в папку `dataset` рядом с ноутбуками.
 
-5. Запуск ноутбуков.
+7. Запуск ноутбуков. При запуске настройте ядро на созданное выше вирутальное окружение.
 
 *Запускать ноутбуки необходимо в следующем порядке:*
 | №  | Ноутбук                                                         |
@@ -73,7 +89,7 @@ pip install -r requirements.txt
 | 12 | [custom_vit_baseline.ipynb](custom_vit_baseline.ipynb)          |
 | 13 | [custom_vit_improved.ipynb](custom_vit_improved.ipynb)          |
 
-6. В папку outputs сохраняться веса обученных моделей, а также результаты обучения (метрики, матрица ошибок) в файле `experiment_results.pkl`.
+8. В папку outputs сохраняться веса обученных моделей, а также результаты обучения (метрики, матрица ошибок) в файле `experiment_results.pkl`.
 
 ---
 
